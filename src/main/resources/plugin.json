@@ -1,10 +1,10 @@
 {
-  "name": "PluginTemplate",
-  "description": "The Grasscutter example plugin, which uses Maven.",
-  "version": "1.0.2-dev",
-  "authors": [ "KingRainbow44" ],
+  "name": "GcEquip",
+  "description": "A grasscutter plugin to equip weapon to any character regardless of the types of weapon",
+  "version": "1.0.0",
+  "authors": [ "Ffauzan" ],
   
-  "mainClass": "xyz.grasscutters.pltm.PluginTemplate",
+  "mainClass": "uk.haku.gcequip.GcEquip",
   
   "comments": [
     "This comments block doesn't need to be in your plugin.json.",

@@ -25,7 +25,7 @@ public final class GcEquip extends Plugin {
      */
     @Override public void onLoad() {
         // Log a plugin status message.
-        this.getLogger().info("The example GcEquip has been loaded.");
+        this.getLogger().info("The GcEquip plugin has been loaded.");
     }
 
     /**

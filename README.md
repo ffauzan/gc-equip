@@ -9,4 +9,4 @@
 2. > /eq {weaponId}
 
 ### Version
-The plugin template is currently on Grasscutter version `1.2.0` and `1.2.2-dev`.
+The plugin template is compatible with Grasscutter version `1.4.5-dev`.

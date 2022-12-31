@@ -1,7 +1,7 @@
 {
   "name": "GcEquip",
   "description": "A grasscutter plugin to equip weapon to any character regardless of the types of weapon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [ "Ffauzan" ],
   
   "mainClass": "uk.haku.gcequip.GcEquip",

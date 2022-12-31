@@ -11,14 +11,15 @@ import emu.grasscutter.game.player.Player;
 
 import java.util.List;
 
-@Command(label = "equip" , description = "Equip weapon to active character", 
-        usage = "equip <weaponId>", aliases = {"eq"}, permission = "player.equip", permissionTargeted = "player.equip.others")
+@Command(label = "equip", usage = "equip <weaponId>", aliases = {
+        "eq" }, permission = "player.equip", permissionTargeted = "player.equip.others")
 public final class EquipCommand implements CommandHandler {
-    @Override public void execute(Player sender, Player targetPlayer, List<String> args) {
+    @Override
+    public void execute(Player sender, Player targetPlayer, List<String> args) {
         GameItem targetItem;
         int itemId;
         Avatar activeAvatar;
-        
+
         // Check if args is valid.
         if (args.size() != 1) {
             CommandHandler.sendMessage(sender, "Wrong args size. Usage: equip <weaponId>");
@@ -53,10 +54,10 @@ public final class EquipCommand implements CommandHandler {
         }
 
         // Get weapon from inventory and it is not equiped by other character.
-        List<GameItem> items =  player.getInventory().getItems().values().stream()
-                            .filter(item -> item.getItemId() == itemId)
-                            .filter(item -> !item.isEquipped())
-                            .toList();
+        List<GameItem> items = player.getInventory().getItems().values().stream()
+                .filter(item -> item.getItemId() == itemId)
+                .filter(item -> !item.isEquipped())
+                .toList();
 
         // Check if weapon is in inventory. Create new weapon item if not.
         if (items.size() == 0) {
@@ -72,7 +73,7 @@ public final class EquipCommand implements CommandHandler {
         activeAvatar = player.getTeamManager().getCurrentAvatarEntity().getAvatar();
 
         // Equip weapon.
-        boolean isSuccess =  activeAvatar.equipItem(targetItem, true);
+        boolean isSuccess = activeAvatar.equipItem(targetItem, true);
 
         if (isSuccess == true) {
             CommandHandler.sendMessage(sender, "Succes equiping weapon " + targetItem.getItemId());
